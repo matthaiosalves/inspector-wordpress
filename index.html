@@ -13,7 +13,7 @@
 <body>
   <div id="app">
     <div class="form">
-      <input v-model="baseurl" /><button @click="start">Buscar!</button>
+      <input placeholder="Insira a url" v-model="baseurl" /><button @click="start">Buscar!</button>
     </div>
     <div class="status" v-if="loading">Carregando...</div>
     <div class="panels">
