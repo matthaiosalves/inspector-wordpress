@@ -13,7 +13,15 @@
 <body>
   <div id="app">
     <div class="form">
-      <input placeholder="Insira a url" v-model="baseurl" /><button @click="start">Buscar!</button>
+      <input placeholder="Insira a url" v-model="baseurl" />
+        <datalist id="Datalist">
+          <option>https://www.bbcamerica.com/</option>
+          <option>https://www.starwars.com/news</option>
+          <option>https://www.mtv.com/news/</option>
+          <option>https://www.nytco.com/</option>
+          <option>https://www.tvgazeta.com.br/</option>
+        </datalist>
+      <button @click="start">Buscar!</button>
     </div>
     <div class="status" v-if="loading">Carregando...</div>
     <div class="panels">
