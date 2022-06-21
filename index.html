@@ -13,15 +13,15 @@
 <body>
   <div id="app">
     <div class="form">
-      <input placeholder="Insira a url" v-model="baseurl" list="Datalist"/>
-        <datalist id="Datalist">
-          <option>https://www.starwars.com/news</option>
-          <option>https://www.tvgazeta.com.br/</option>
-        </datalist>
+      <input placeholder="Insira a url" v-model="baseurl" list="Datalist" />
+      <datalist id="Datalist">
+        <option>https://www.starwars.com/news</option>
+        <option>https://www.tvgazeta.com.br/</option>
+      </datalist>
       <button @click="start">Buscar!</button>
     </div>
     <div class="status" v-if="loading">Carregando...</div>
-    <div class="panels">
+    <div class="panels" v-if="buttonSearch">
       <ul>
         <li v-for="r in routes" @click="route=r">{{r}}</li>
       </ul>
