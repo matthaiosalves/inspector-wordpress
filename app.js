@@ -5,6 +5,7 @@ let app = new Vue({
     routes: [],
     posts: [],
     loading: false,
+    buttonSearch: false,
     post:{},
   },
   _route: '',
@@ -30,6 +31,7 @@ let app = new Vue({
     start() {
       app.routes = [];
       app.loading = true;
+      app.buttonSearch = true;
       fetch(app.baseurl + '/wp-json/wp/v2').then((r) => {
         r.json().then((d) => {
           app.loading = false;
