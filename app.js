@@ -31,10 +31,10 @@ let app = new Vue({
     start() {
       app.routes = [];
       app.loading = true;
-      app.buttonSearch = true;
       fetch(app.baseurl + '/wp-json/wp/v2').then((r) => {
         r.json().then((d) => {
           app.loading = false;
+          app.buttonSearch = true;
           for (var r in d.routes) {
             if (r.indexOf('(') == -1)
               app.routes.push(r);
